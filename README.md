@@ -1,4 +1,6 @@
-# Mastermind
+# Games
+
+## Mastermind
 
 ### Setup
 
