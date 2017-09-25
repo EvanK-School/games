@@ -30,14 +30,17 @@ while True:
     count += 1
     correct = 0
     lst = list(input('> '))
-    for x in range(4):
-        if lst[x] == num[x]:
-            correct += 1
+    if len(lst) >= 4:
+        for x in range(4):
+            if lst[x] == num[x]:
+                correct += 1
 
-    print('*' * correct)
+        print('*' * correct)
 
-    if correct == 4:
-        break
+        if correct == 4:
+            break
+    else:
+        count -= 1
 
 tries = '{0} tries'.format(count)
 nice = ['Nice! ', 'Well done! ', 'Good Job! ', 'Impressive! ']
