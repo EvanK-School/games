@@ -11,6 +11,7 @@ print('Welcome to Mastermind!')
 print('See README.md for help')
 tm.sleep(0.5)
 print('Generating random 4-digit number...')
+print()
 tm.sleep(1.5)
 
 maxi = 9
