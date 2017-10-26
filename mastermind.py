@@ -31,7 +31,7 @@ while True:
     count += 1
     correct = 0
     lst = list(input('> '))
-    if len(lst) >= 4:
+    if len(lst) == 4:
         for x in range(4):
             if lst[x] == num[x]:
                 correct += 1
