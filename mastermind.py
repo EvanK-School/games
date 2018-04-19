@@ -5,6 +5,7 @@ import time as tm
 import os
 from sys import argv
 
+# Clearing, Welcome screen
 print(os.popen('clear').read())
 
 print('Welcome to Mastermind!')
@@ -14,19 +15,21 @@ print('Generating random 4-digit number...')
 print()
 tm.sleep(1.5)
 
-maxi = 9
+# Determining difficulty
+my_max = 9
 if len(argv) > 1:
     if argv[1] == '-d' and argv[2][0].isdigit():
-        maxi = int(argv[2][0])
+        my_max = int(argv[2][0])
 
-print('Based on your difficulty, there are {0} possible combinations'.format((maxi + 1) ** 4))
+print('Based on your difficulty, there are {0} possible combinations'.format((my_max + 1) ** 4))
 
+# Setup
 num = []
 for x in range(4):
-    num.append(str(rd.randint(0, maxi)))
+    num.append(str(rd.randint(0, my_max)))
 
+# Game Loop
 count = 0
-
 while True:
     count += 1
     correct = 0
@@ -43,6 +46,7 @@ while True:
     else:
         count -= 1
 
+# Ending the Game
 tries = '{0} tries'.format(count)
 nice = ['Nice! ', 'Well done! ', 'Good Job! ', 'Impressive! ']
 tote = ['All in all, you took: ', 'That took you: ', 'In the end, that was: ']
