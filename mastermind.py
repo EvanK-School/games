@@ -6,7 +6,7 @@ import os
 from sys import argv
 
 # Clearing, Welcome screen
-print(os.popen('clear').read())
+if '-c' in argv: print(os.popen('clear').read()); argv.remove('-c')
 
 print('Welcome to Mastermind!')
 print('See README.md for help')
