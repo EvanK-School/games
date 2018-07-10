@@ -3,7 +3,7 @@
 import random as rd
 import time as tm
 import os
-from sys import argv
+from sys import argv, exit
 
 # Clearing, Welcome screen
 if '-c' in argv: print(os.popen('clear').read()); argv.remove('-c')
@@ -33,8 +33,9 @@ count = 0
 while True:
     count += 1
     correct = 0
-    lst = list(input('> '))
-    if len(lst) == 4:
+    guess = input('> ')
+    if len(guess) == 4 and guess.isdigit():
+        lst = list(guess)
         for x in range(4):
             if lst[x] == num[x]:
                 correct += 1
@@ -43,6 +44,8 @@ while True:
 
         if correct == 4:
             break
+    elif guess.lower() == 'exit':
+        exit()
     else:
         count -= 1
 
