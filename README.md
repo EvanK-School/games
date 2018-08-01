@@ -1,21 +1,15 @@
 # Games
 
-## Mastermind
-### Setup
+## Installation
 
-Setup is easy, once the git repository is cloned.
+0. Symlink (`ln -s`) the `game.sh` file in this directory to a directory of your choice.
+    - The target directory must be withing your `$PATH`
+    - An empty `install.sh` file is included, which will soon be updated.
 
-0. Make sure you are running `python 3.6.1`
-1. Make sure you have permission to execute the file, using `chmod +x`.
-2. Optionally, link `mastermind.py` to one of the directories in your path.
-    - I will be using `/usr/local/bin`
+## Rules and Gameplay
 
-```bash
-$ ln -s "$(pwd)/mastermind.py" /usr/local/bin/mastermind
-```
-
-### Gameplay
-1. Type `mastermind` into the command prompt.
+### Mastermind
+1. Type `game mastermind` into the command prompt.
     - If you did not link `mastermind.py` to part of your path, you will need to be in the
       directory of `mastermind.py`, and type `./mastermind.py`.
 2. Add flags if necessary.
@@ -25,3 +19,16 @@ $ ln -s "$(pwd)/mastermind.py" /usr/local/bin/mastermind
 4. Every `*` printed after your input represents one correct number in the right place (but
    you won't know which is which).
 5. To exit the game, simply type `exit`.
+
+```shell
+$ game mastermind -d 0
+
+Welcome to Mastermind!
+See README.md for help
+Generating random 4-digit number...
+
+Based on your difficulty, there are 1 possible combinations
+> 0000
+****
+Well done! In the end, that was: 1 tries.
+```
