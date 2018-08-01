@@ -3,10 +3,15 @@
 import random as rd
 import time as tm
 import os
-from sys import argv, exit
+from sys import argv
 
 # Clearing, Welcome screen
-if '-c' in argv: print(os.popen('clear').read()); argv.remove('-c')
+if '-c' in argv:
+    print(os.popen('clear').read())
+    argv.remove('-c')
+else:
+    print()
+    print('======================')
 
 print('Welcome to Mastermind!')
 print('See README.md for help')
@@ -30,6 +35,7 @@ for x in range(4):
 
 # Game Loop
 count = 0
+win = False
 while True:
     count += 1
     correct = 0
@@ -43,15 +49,18 @@ while True:
         print('*' * correct)
 
         if correct == 4:
+            win = True
             break
     elif guess.lower() == 'exit':
-        exit()
+        break
     else:
         count -= 1
 
 # Ending the Game
 tries = '{0} tries'.format(count)
-nice = ['Nice! ', 'Well done! ', 'Good Job! ', 'Impressive! ']
-tote = ['All in all, you took: ', 'That took you: ', 'In the end, that was: ']
-print(rd.choice(nice) + rd.choice(tote) + tries + '.')
+nice = ['Nice!', 'Well done!', 'Good Job!', 'Impressive!']
+tote = ['All in all, you took:', 'That took you:', 'In the end, that was:']
+if win == True:
+    print(rd.choice(nice), rd.choice(tote), tries + '.')
+print('======================')
 print()

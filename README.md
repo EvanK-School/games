@@ -23,6 +23,7 @@
 ```shell
 $ game mastermind -d 0
 
+======================
 Welcome to Mastermind!
 See README.md for help
 Generating random 4-digit number...
@@ -30,5 +31,6 @@ Generating random 4-digit number...
 Based on your difficulty, there are 1 possible combinations
 > 0000
 ****
-Well done! In the end, that was: 1 tries.
+Well done! All in all, you took: 1 tries.
+======================
 ```
