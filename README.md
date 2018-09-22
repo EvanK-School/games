@@ -9,6 +9,9 @@
 ## Rules and Gameplay
 
 ### Mastermind
+- A command-line adaptation of Mastermind, using numbers instead of colors.
+- Requirements: [Python 3.6](https://www.anaconda.com/download/)
+
 1. Type `game mastermind` into the command prompt.
     - If you did not link `mastermind.py` to part of your path, you will need to be in the
       directory of `mastermind.py`, and type `./mastermind.py`.
