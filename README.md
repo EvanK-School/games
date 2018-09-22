@@ -13,8 +13,6 @@
 - Requirements: [Python 3.6](https://www.anaconda.com/download/)
 
 1. Type `game mastermind` into the command prompt.
-    - If you did not link `mastermind.py` to part of your path, you will need to be in the
-      directory of `mastermind.py`, and type `./mastermind.py`.
 2. Add flags if necessary.
     - Select difficulty by typing `-d <num>`, where <num> is an integer 1-9.
     - Optionally clear the screen before playing the game with the flag `-c`.
