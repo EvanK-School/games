@@ -34,3 +34,12 @@ Based on your difficulty, there are 1 possible combinations
 Well done! All in all, you took: 1 tries.
 ======================
 ```
+
+### Exploder
+- "A fun little game where you try to bounce balls till they explode!"
+- Requirements: [Beaker Browser](https://beakerbrowser.com/)
+    - Opens a `dat` (P2P) website
+
+1. Type `game exploder` into the command prompt.
+2. No flags are available at this time.
+3. Click and drag to create explosions and set the circles on fire.
